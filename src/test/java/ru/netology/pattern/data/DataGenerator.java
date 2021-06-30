@@ -1,6 +1,7 @@
 package ru.netology.pattern.data;
 
 import com.github.javafaker.Faker;
+import com.google.gson.Gson;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
@@ -28,7 +29,7 @@ public class DataGenerator {
     private static void sendRequest(RegistrationDto user) {
             given()
                     .spec(requestSpec)
-                    .body(user)
+                    .body(new Gson().toJson(user))
                     .when()
                     .post("/api/system/users")
                     .then()
