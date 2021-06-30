@@ -1,0 +1,1 @@
+# Project Sample  [![Build status](https://ci.appveyor.com/api/projects/status/ni4bdvaxtix90ilg?svg=true)](https://ci.appveyor.com/project/antidot8/patternstestmode)
